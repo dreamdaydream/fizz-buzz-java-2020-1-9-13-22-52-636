@@ -48,22 +48,22 @@ public class FizzBuzzTest {
 
   @Test
   public void  should_return_fizzbuzz_given_a_number_of_both_multiple_of_three_and_five() {
-    Integer inputNumber = 15;
+    Integer inputNumber = 30;
 
     FizzBuzz fizzBuzz = new FizzBuzz();
     String actualResult = fizzBuzz.fizzBuzz(inputNumber);
 
-    assertEquals("FizzBuzz", actualResult);
+    assertEquals("Fizz", actualResult);
   }
 
   @Test
   public void  should_return_fizzbuzz_given_a_number_of_both_multiple_of_seven_and_five() {
-    Integer inputNumber = 35;
+    Integer inputNumber = 70;
 
     FizzBuzz fizzBuzz = new FizzBuzz();
     String actualResult = fizzBuzz.fizzBuzz(inputNumber);
 
-    assertEquals("BuzzWhizz", actualResult);
+    assertEquals("Whizz", actualResult);
   }
 
   @Test
@@ -83,8 +83,47 @@ public class FizzBuzzTest {
     FizzBuzz fizzBuzz = new FizzBuzz();
     String actualResult = fizzBuzz.fizzBuzz(inputNumber);
 
-    assertEquals("FizzBuzzWhizz", actualResult);
+    assertEquals("BuzzWhizz", actualResult);
   }
 
+  @Test
+  public void  should_return_fizz_given_a_number_contains_three() {
+    Integer inputNumber = 13;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("Fizz", actualResult);
+  }
+
+  @Test
+  public void  should_ignore_the_rule_about_three_given_a_number_contains_five() {
+    Integer inputNumber = 35;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("BuzzWhizz", actualResult);
+  }
+
+  @Test
+  public void  should_ignore_the_rule_about_five_given_a_number_contains_seven() {
+    Integer inputNumber = 75;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("Fizz", actualResult);
+  }
+
+  @Test
+  public void  should_return_itself_given_51() {
+    Integer inputNumber = 51;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("51", actualResult);
+  }
 
 }
