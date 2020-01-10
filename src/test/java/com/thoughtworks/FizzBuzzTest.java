@@ -13,7 +13,7 @@ public class FizzBuzzTest {
     FizzBuzz fizzBuzz = new FizzBuzz();
     String actualResult = fizzBuzz.fizzBuzz(inputNumber);
 
-    assertEquals("fizz", actualResult);
+    assertEquals("Fizz", actualResult);
   }
 
   @Test
@@ -25,4 +25,15 @@ public class FizzBuzzTest {
 
     assertEquals("1", actualResult);
   }
+
+  @Test
+  public void should_return_buzz_when_run_fizzbuzz_given_a_number_is_multiple_of_five() {
+    Integer inputNumber = 5;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("Buzz", actualResult);
+  }
+
 }
