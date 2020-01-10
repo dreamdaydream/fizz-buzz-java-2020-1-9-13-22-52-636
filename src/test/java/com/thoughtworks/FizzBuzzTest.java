@@ -36,4 +36,14 @@ public class FizzBuzzTest {
     assertEquals("Buzz", actualResult);
   }
 
+  @Test
+  public void should_return_buzz_when_run_fizzbuzz_given_a_number_is_multiple_of_seven() {
+    Integer inputNumber = 7;
+
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String actualResult = fizzBuzz.fizzBuzz(inputNumber);
+
+    assertEquals("Whizz", actualResult);
+  }
+
 }
